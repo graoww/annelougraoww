@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnneLou Graoww </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body onload="pickimage()">
+    <header><div>
+        <ul class="language">
+            <li><a href="index_eng.html">ENG</a></li>
+            <li><a href="index_kr.html">한국어</a></li>
+        </ul>
+    </div>
+</header>
+    <nav id="desktop-nav">
+        <div class="logo"><a href=""><img src="img/annelougraoww_logo.png"></a></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="perso.html">réalisation</a></li>
+                <li><a href="travail.html">animation</a></li>
+                <li><a href="moi.html">à propos</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="index.html"><img src="img/annelougraoww_logo.png"></a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="perso.html" onclick="toggleMenu()">réalistaion</a></li>
+                <li><a href="travail.html" onclick="toggleMenu()">animation</a></li>
+                <li><a href="moi.html" onclick="toggleMenu()">à propos</a></li>
+            </div>
+        </div>
+    </nav>
+    <script src="script.js"></script>
+
+    <div id="image"></div>
+
+    <script>
+    
+    var images = [
+      "img/gif/annelougraoww_1.gif",
+      "img/gif/annelougraoww_2.gif",
+      "img/gif/annelougraoww_3.gif",
+      "img/gif/annelougraoww_4.gif",
+      "img/gif/annelougraoww_5.gif",
+      "img/gif/annelougraoww_7.gif",
+      "img/gif/annelougraoww_lostinreflection.gif",
+      "img/gif/annelougraoww_6.gif",
+    ];
+    
+    function randImg() {
+      var size = images.length
+      var x = Math.floor(size * Math.random())
+      document.getElementById('image').style.backgroundImage = 'url(' + images[x] + ')';
+    }
+    
+    randImg();
+
+    </script>
+
+<a href="perso.html">
+        <div class="greeting" >
+          <h2>Anne-Lou Graoww</h2>
+          <span class="presentation" ><h3>animation 2D
+        </h3></span>
+        </div>
+        </a>
+        
+        <div></div>
+</body>
+<footer>
+    <div>copyright © Anne-Lou Graoww</div>
+
+</footer>
+</html>

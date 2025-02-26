@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beurk !</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+</head>
+<body>
+    <header><div>
+        <ul class="language">
+            <li><a href="index_eng.html">ENG</a></li>
+            <li><a href="index_kr.html">한국어</a></li>
+        </ul>
+    </div>
+</header>
+    <nav id="desktop-nav">
+        <div class="logo"><a href="../index.html"><img src="../img/annelougraoww.png"></a></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="../perso.html">réalisation</a></li>
+                <li><a href="../travail.html">animation</a></li>
+                <li><a href="../moi.html">à propos</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html"><img src="../img/annelougraoww.png"></a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../perso.html" onclick="toggleMenu()">réalisation</a></li>
+                <li><a href="../travail.html" onclick="toggleMenu()">animation</a></li>
+                <li><a href="../moi.html" onclick="toggleMenu()">à propos</a></li>
+            </div>
+        </div>
+    </nav>
+    <script src="../script.js"></script>
+
+<!-- The expanding image container -->
+<div class="projet-container">
+    <!-- Expanded image -->
+    <img id="expandedImg" style="width:100%;">
+    <!-- Image text -->
+    <div id="imgtext"></div>
+</div>
+<span class="article">
+            <h2>Beurk !</h2>
+            <h3>réalisé par Loïc Espuche</h3>
+            12" 2023 
+            <br><b>animatrice TVPaint</b>
+            <br><br><b><a href="https://www.france.tv/films/courts-metrages/6086735-beurk.html" target="blank" alt="film complet sur arte">voir le film</a></b>
+            <br> Le film à été selectionné aux Césars et aux Oscars
+
+        </p></span>
+  </div>
+     
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+        // Select the first image
+        var firstImage = document.querySelector('.scroll-container img');
+
+        // If the first image exists, trigger its click event
+        if (firstImage) {
+            firstImage.click();
+        }
+    });
+
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        document.querySelector('.projet-container').style.display = "block";
+    }
+</script>
+        <div class="scroll-container">
+            <img src="../img/gif/w/beurk1.gif" alt="Beurk! réalisé par Loic Espuche" onclick="myFunction(this);">
+            <img src="../img/gif/w/beurk2.gif" alt="j'ai animé mes plans jusqu'au clean" onclick="myFunction(this);">
+            <img src="../img/gif/w/beurk3.gif" alt="" onclick="myFunction(this);">
+        </div>    
+
+</body>
+<footer>
+    <div>© Loïc Espuche</div>
+
+</footer>
+</html>
